@@ -22,10 +22,12 @@ img {
 li,
 p {
     color: var(--secondary);
+    font-family: "Abyssinica SIL";
 }
 
 h3 {
     color: var(--accent);
+    font-family: "Ubuntu";
 }
 
 h1,
@@ -42,4 +44,5 @@ audio {
 a {
     color: var(--secondary);
     border: 2px solid var(--primary);
+    font-family: "Abyssinica SIL";
 }
