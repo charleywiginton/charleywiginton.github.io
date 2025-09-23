@@ -23,19 +23,21 @@ li,
 p {
     color: var(--secondary);
     font-family: "Abyssinica SIL";
+    text-decoration: overline;
 }
 
 h3 {
     color: var(--accent);
     font-family: "Ubuntu";
     font-size: medium;
-    
+    text-decoration: underline;
 }
 
 h1,
 h2 {
     color: var(--primary);
     font: italic bold 2em "Ubuntu", sans-serif;
+    text-decoration: underline;
 }
 
 audio {
@@ -48,4 +50,5 @@ a {
     border: 2px solid var(--primary);
     font-family: "Abyssinica SIL";
     font-weight: 900;
+    font-size: x-large;
 }
