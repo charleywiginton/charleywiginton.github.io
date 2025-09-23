@@ -28,12 +28,14 @@ p {
 h3 {
     color: var(--accent);
     font-family: "Ubuntu";
+    font-size: medium;
+    
 }
 
 h1,
 h2 {
     color: var(--primary);
-    font-family: "Ubuntu";
+    font: italic bold 2em "Ubuntu", sans-serif;
 }
 
 audio {
@@ -45,4 +47,5 @@ a {
     color: var(--secondary);
     border: 2px solid var(--primary);
     font-family: "Abyssinica SIL";
+    font-weight: 900;
 }
