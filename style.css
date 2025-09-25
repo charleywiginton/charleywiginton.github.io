@@ -16,7 +16,8 @@ img {
     padding: 10px;
     border: 10px solid var(--secondary);
     border-radius: 1000px;
-    background: var(--primary)
+    background: var(--primary);
+    width: 300px;
 }
 
 li,
@@ -25,6 +26,7 @@ p {
     font-family: "Abyssinica SIL";
     text-decoration: overline;
     margin: 20px
+
 }
 
 h3 {
@@ -40,7 +42,8 @@ h2 {
     color: var(--primary);
     font: italic bold 2em "Ubuntu", sans-serif;
     text-decoration: underline;
-    padding: 100px
+    padding: 100px;
+    height: 100px;
 }
 
 audio {
@@ -58,6 +61,6 @@ a {
     margin: 30px
 }
 
-*{
+* {
     border: 1px solid var(--text)
 }
