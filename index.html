@@ -21,4 +21,24 @@
     <a href="my_family.html">My Family</a>
 </body>
 
+<p id="balloon">🎈</p>
+
+<script>
+  let ballonEl = document.getElementById("balloon");
+  let fontSize = 10;
+  function handleBalloonSize(event){
+    if (event.key == "ArrowUp") {
+      fontSize*=1.1;
+      ballonEl.style.fontSize=fontSize+"px";
+      event.preventDefault();
+    }
+    if (event.key == "ArrowDown") {
+      fontSize/=1.1;
+      ballonEl.style.fontSize=fontSize+"px";
+      event.preventDefault();
+    }
+    }
+    window.addEventListener("keydown", handleBalloonSize);
+</script>
+
 </html>
