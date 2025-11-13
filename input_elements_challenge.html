@@ -59,7 +59,7 @@
             Volume:
             <input id="volumeInput" type="range" min="0" max="100" value="50">
         </label>
-        <div class="output" id="colorOutput"></div>
+        <div class="output" id="colorOutput">test</div>
     </section>
 
     <section id="part3">
@@ -83,6 +83,12 @@
         btnGreet.addEventListener("click", () => {
             // TODO: Display a message like "Hello NAME, you are AGE years old!"
             // Challenge: If age < 13, show "You're just a kid!" instead.
+            let name= nameInput.value;
+            let age= ageInput.value;
+            greetingOutput.textContent="Hi " + name + ", you are " + age + " years old!";
+            if (age < 13) {
+            greetingOutput.textContent="You're just a kid!";
+        }
         });
 
         // --- PART 2 ---
@@ -92,6 +98,15 @@
 
         // TODO: Update the background color of colorOutput whenever the color input changes.
         // Challenge: Also display the hex code and volume value dynamically.
+        //let colorIn=colorInput.value;
+        //let volume=volumeInput.value;
+        //let colorOut=colorOutput.value;
+        colorInput.addEventListener("input", ()=> {
+            colorOutput.style.backgroundColor=colorInput.value;
+            // colorOutput.textContent=
+
+        });
+
 
         // --- PART 3 ---
         const subscribeBox = document.getElementById("subscribeBox");
