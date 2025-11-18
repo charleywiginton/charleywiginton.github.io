@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section id="part1">
+        <label>
+            Enter an adjective:
+            <input id="wordAdjective" type="text" placeholder="Enter an adjective">
+        </label>
+        <br>
+        <label>
+            Enter a verb:
+            <input id="wordVerb" type="text" placeholder="Enter an verb">
+        </label>
+        <br>
+        <label>
+            Enter a noun:
+            <input id="wordNoun" type="text" placeholder="Enter a noun">
+        </label>
+        <br>
+        <label>
+            Enter an adjective:
+            <input id="wordAdjectiveTwo" type="text" placeholder="Enter an adjective">
+        </label>
+        <br>
+        <label>
+            Enter a word describing sound:
+            <input id="wordSound" type="text" placeholder="Enter a word describing sound">
+        </label>
+        <br>
+        <label>
+            Enter a noun:
+            <input id="wordNounTwo" type="text" placeholder="Enter a noun">
+        </label>
+        <br>
+        <label>
+            Enter a verb:
+            <input id="wordVerbTwo" type="text" placeholder="Enter an verb">
+        </label>
+        <br>
+         <label>
+            Enter a word describing sound:
+            <input id="wordSoundTwo" type="text" placeholder="Enter a word describing sound">
+        </label>
+        <br>
+        <button id="btnGenerate">Generate</button>
+        <div class="output" id="generateOutput"></div>
+    </section>
+</body>
+</html>
+<script>
+        const wordAdjective = document.getElementById("wordAdjective");
+        const wordVerb = document.getElementById("wordVerb");
+        const wordVerbTwo = document.getElementById("wordVerbTwo");
+        const wordAdjectiveTwo = document.getElementById("wordAdjectiveTwo");
+        const wordSound = document.getElementById("wordSound");
+        const wordSoundTwo = document.getElementById("wordSoundTwo");
+        const wordNoun = document.getElementById("wordNoun");
+        const wordNounTwo = document.getElementById("wordNounTwo");
+        const generateOutput=document.getElementById("generateOutput");
+        const btnGenerate=document.getElementById("btnGenerate");
+
+
+        btnGenerate.addEventListener("click", () => {
+        let wordAdjective=wordAdjective.value;
+        let wordVerb=wordVerb.value;
+        let wordVerbTwo=wordVerbTwo.value;
+        let wordSound=wordSound.value;
+        let wordAdjectiveTwo=wordAdjectiveTwo.value;
+        let wordSoundTwo=wordSoundTwo.value;
+        let wordNoun=wordNoun.value;
+        let wordNounTwo=wordNounTwo.value;
+        generateOutput.textContent = "The " + wordAdjective + " toaster began to " +wordVerb+" itself into a terrifying "+wordNoun+ ". It started making a loud " + wordSound+ ", which immediately confused the nearest " +wordNounTwo+ ". Panicked, the toaster attempted to "+wordVerb+ " across the counter, resulting in a final, goofy "+wordSoundTwo+"!"
+
+        });
+</script>
