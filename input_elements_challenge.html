@@ -68,9 +68,9 @@
         <h2>Part 3: Checkbox and Radio Buttons</h2>
         <label><input type="checkbox" id="subscribeBox"> Subscribe to newsletter</label>
         <p>Pick a mode:</p>
-        <label><input type="radio" name="mode" value="Light"> Light</label>
-        <label><input type="radio" name="mode" value="Dark"> Dark</label>
-        <label><input type="radio" name="mode" value="System" checked> System</label>
+        <label><input type="radio" name="mode" id="lightMode" value="Light"> Light</label>
+        <label><input type="radio" name="mode" id="darkMode" value="Dark"> Dark</label>
+        <label><input type="radio" name="mode" id="systemMode" value="System" checked> System</label>
         <button id="btnSubmit">Submit</button>
         <div class="output" id="modeOutput"></div>
     </section>
@@ -85,12 +85,12 @@
         btnGreet.addEventListener("click", () => {
             // TODO: Display a message like "Hello NAME, you are AGE years old!"
             // Challenge: If age < 13, show "You're just a kid!" instead.
-            let name= nameInput.value;
-            let age= ageInput.value;
-            greetingOutput.textContent="Hi " + name + ", you are " + age + " years old!";
+            let name = nameInput.value;
+            let age = ageInput.value;
+            greetingOutput.textContent = "Hi " + name + ", you are " + age + " years old!";
             if (age < 13) {
-            greetingOutput.textContent="You're just a kid!";
-        }
+                greetingOutput.textContent = "You're just a kid!";
+            }
         });
 
         // --- PART 2 ---
@@ -100,8 +100,8 @@
 
         // TODO: Update the background color of colorOutput whenever the color input changes.
         // Challenge: Also display the hex code and volume value dynamically.
-        colorInput.addEventListener("input", ()=> {
-            colorOutput.style.backgroundColor=colorInput.value;
+        colorInput.addEventListener("input", () => {
+            colorOutput.style.backgroundColor = colorInput.value;
         });
 
 
@@ -109,10 +109,22 @@
         const subscribeBox = document.getElementById("subscribeBox");
         const btnSubmit = document.getElementById("btnSubmit");
         const modeOutput = document.getElementById("modeOutput");
+        const lightMode = document.getElementById("lightMode");
+        const darkMode = document.getElementById("darkMode");
+        const systemMode = document.getElementById("systemMode");
 
         btnSubmit.addEventListener("click", () => {
             // TODO: Find which radio button is checked and display it.
             // Challenge: Include whether the user subscribed or not.
+            if (lightMode.clicked){
+                modeOutput=lightMode
+            }
+            if(darkMode.clicked){
+                modeOutput=lightMode
+            }
+            if (systemMode.clicked){
+                modeOutput=systemMode
+            }
         });
     </script>
 </body>
