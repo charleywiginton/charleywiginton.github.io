@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <section id="part1">
+        
+
+        <a href="index.html">Main Page</a>
         <label>
             Enter an adjective:
             <input id="wordAdjective" type="text" placeholder="Enter an adjective">
@@ -42,39 +47,62 @@
             <input id="wordVerbTwo" type="text" placeholder="Enter an verb">
         </label>
         <br>
-         <label>
+        <label>
             Enter a word describing sound:
             <input id="wordSoundTwo" type="text" placeholder="Enter a word describing sound">
         </label>
         <br>
         <button id="btnGenerate">Generate</button>
         <div class="output" id="generateOutput"></div>
+        <button id="btnReset">Reset</button>
     </section>
 </body>
+
 </html>
 <script>
-        const wordAdjective = document.getElementById("wordAdjective");
-        const wordVerb = document.getElementById("wordVerb");
-        const wordVerbTwo = document.getElementById("wordVerbTwo");
-        const wordAdjectiveTwo = document.getElementById("wordAdjectiveTwo");
-        const wordSound = document.getElementById("wordSound");
-        const wordSoundTwo = document.getElementById("wordSoundTwo");
-        const wordNoun = document.getElementById("wordNoun");
-        const wordNounTwo = document.getElementById("wordNounTwo");
-        const generateOutput=document.getElementById("generateOutput");
-        const btnGenerate=document.getElementById("btnGenerate");
+    const wordAdjectiveEl = document.getElementById("wordAdjective");
+    const wordVerbEl = document.getElementById("wordVerb");
+    const wordVerbTwoEl = document.getElementById("wordVerbTwo");
+    const wordAdjectiveTwoEl = document.getElementById("wordAdjectiveTwo");
+    const wordSoundEl = document.getElementById("wordSound");
+    const wordSoundTwoEl = document.getElementById("wordSoundTwo");
+    const wordNounEl = document.getElementById("wordNoun");
+    const wordNounTwoEl = document.getElementById("wordNounTwo");
+    const generateOutputEl = document.getElementById("generateOutput");
+    const btnGenerateEl = document.getElementById("btnGenerate");
+    const btnResetEl = document.getElementById("btnReset");
 
 
-        btnGenerate.addEventListener("click", () => {
-        let wordAdjective=wordAdjective.value;
-        let wordVerb=wordVerb.value;
-        let wordVerbTwo=wordVerbTwo.value;
-        let wordSound=wordSound.value;
-        let wordAdjectiveTwo=wordAdjectiveTwo.value;
-        let wordSoundTwo=wordSoundTwo.value;
-        let wordNoun=wordNoun.value;
-        let wordNounTwo=wordNounTwo.value;
-        generateOutput.textContent = "The " + wordAdjective + " toaster began to " +wordVerb+" itself into a terrifying "+wordNoun+ ". It started making a loud " + wordSound+ ", which immediately confused the nearest " +wordNounTwo+ ". Panicked, the toaster attempted to "+wordVerb+ " across the counter, resulting in a final, goofy "+wordSoundTwo+"!"
+    btnGenerate.addEventListener("click", () => {
+        generateOutput.textContent = "The " + wordAdjectiveEl.value + " toaster began to " + wordVerbEl.value+ " itself into a terrifying " + wordNounEl.value+ ". It started making a loud " + wordSoundEl.value+ ", which immediately confused the nearest " + wordNounTwoEl.value+ ". Panicked, the toaster attempted to " + wordVerbEl.value+ " across the counter, resulting in a final, goofy " + wordSoundTwoEl.value+ "!"
+        if (wordAdjectiveEl.value==""){
+            generateOutput.textContent="Enter text"
+        };
+        if (wordVerbEl.value==""){
+            generateOutput.textContent="Enter text"
+        };
+        if (wordVerbTwoEl.value==""){
+            generateOutput.textContent="Enter text"
+        };
+         if (wordSoundEl.value==""){
+            generateOutput.textContent="Enter text"
+        };
+        if (wordSoundTwoEl.value==""){
+            generateOutput.textContent="Enter text"
+        };
+        if (wordAdjectiveTwoEl.value==""){
+            generateOutput.textContent="Enter text"
+        };
+        if (wordNounTwoEl.value==""){
+            generateOutput.textContent="Enter text"
+        };
+        if (wordNounEl.value==""){
+            generateOutput.textContent="Enter text"
+        };
+    });
+    btnReset.addEventListener("click", () => {
+        generateOutput.textContent= " "
+    });
 
-        });
+
 </script>
