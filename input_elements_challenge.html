@@ -119,15 +119,15 @@
         btnSubmit.addEventListener("click", () => {
             // TODO: Find which radio button is checked and display it.
             // Challenge: Include whether the user subscribed or not.
-            if (lightMode.clicked){
-                modeOutput=lightMode
-            }
-            if(darkMode.clicked){
-                modeOutput=lightMode
-            }
-            if (systemMode.clicked){
-                modeOutput=systemMode
-            }
+            if (lightMode.checked){
+                modeOutput.textContent = "Light Mode"
+            };
+            if(darkMode.checked){
+                modeOutput.textContent = "Dark Mode"
+            };
+            if (systemMode.checked){
+                modeOutput.textContent = "System Mode"
+            };
         });
     </script>
 </body>
