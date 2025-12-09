@@ -24,7 +24,6 @@ li,
 p {
     color: var(--secondary);
     font-family: "Abyssinica SIL";
-    text-decoration: overline;
     margin: 20px
 
 }
@@ -40,10 +39,14 @@ h3 {
 h1,
 h2 {
     color: var(--primary);
-    font: italic bold 2em "Ubuntu", sans-serif;
-    text-decoration: underline;
-    padding: 100px;
-    height: 100px;
+    font: bold 2em "Ubuntu", sans-serif;
+    padding: 25px;
+    height: 50px;
+}
+
+h2 {
+    padding:5px;
+    height: 10px;
 }
 
 audio {
@@ -54,13 +57,8 @@ audio {
 
 a {
     color: var(--secondary);
-    border: 2px solid var(--primary);
     font-family: "Abyssinica SIL";
     font-weight: 900;
     font-size: x-large;
     margin: 30px
-}
-
-* {
-    border: 1px solid var(--text)
 }
