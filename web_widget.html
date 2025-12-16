@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mad Libs Game</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
@@ -15,11 +15,17 @@
 
 <body>
     <section id="part1">
-        
+
 
         <a href="index.html">Main Page</a>
         <br>
         <h1>Mad Libs Game!</h1>
+        <br>
+        <label>
+            Background Color:
+            <input id="colorInput" type="color" value="#00AAFF">
+            <div class="output" id="colorOutput"></div>
+        </label>
         <br>
         <label>
             Enter an adjective:
@@ -83,35 +89,40 @@
 
 
     btnGenerate.addEventListener("click", () => {
-        generateOutput.textContent = "The " + wordAdjectiveEl.value + " toaster began to " + wordVerbEl.value+ " itself into a terrifying " + wordNounEl.value+ ". It started making a loud " + wordSoundEl.value+ ", which immediately confused the nearest " + wordNounTwoEl.value+ ". Panicked, the toaster attempted to " + wordVerbEl.value+ " across the counter, resulting in a final, goofy " + wordSoundTwoEl.value+ "!"
-        if (wordAdjectiveEl.value==""){
-            generateOutput.textContent="Enter text"
+        generateOutput.textContent = "The " + wordAdjectiveEl.value + " toaster began to " + wordVerbEl.value + " itself into a terrifying " + wordNounEl.value + ". It started making a loud " + wordSoundEl.value + ", which immediately confused the nearest " + wordNounTwoEl.value + ". Panicked, the toaster attempted to " + wordVerbEl.value + " across the counter, resulting in a final, goofy " + wordSoundTwoEl.value + "!"
+        if (wordAdjectiveEl.value == "") {
+            generateOutput.textContent = "Enter text"
         };
-        if (wordVerbEl.value==""){
-            generateOutput.textContent="Enter text"
+        if (wordVerbEl.value == "") {
+            generateOutput.textContent = "Enter text"
         };
-        if (wordVerbTwoEl.value==""){
-            generateOutput.textContent="Enter text"
+        if (wordVerbTwoEl.value == "") {
+            generateOutput.textContent = "Enter text"
         };
-         if (wordSoundEl.value==""){
-            generateOutput.textContent="Enter text"
+        if (wordSoundEl.value == "") {
+            generateOutput.textContent = "Enter text"
         };
-        if (wordSoundTwoEl.value==""){
-            generateOutput.textContent="Enter text"
+        if (wordSoundTwoEl.value == "") {
+            generateOutput.textContent = "Enter text"
         };
-        if (wordAdjectiveTwoEl.value==""){
-            generateOutput.textContent="Enter text"
+        if (wordAdjectiveTwoEl.value == "") {
+            generateOutput.textContent = "Enter text"
         };
-        if (wordNounTwoEl.value==""){
-            generateOutput.textContent="Enter text"
+        if (wordNounTwoEl.value == "") {
+            generateOutput.textContent = "Enter text"
         };
-        if (wordNounEl.value==""){
-            generateOutput.textContent="Enter text"
+        if (wordNounEl.value == "") {
+            generateOutput.textContent = "Enter text"
         };
     });
     btnReset.addEventListener("click", () => {
-        generateOutput.textContent= " "
+        generateOutput.textContent = " "
     });
 
+    const colorInput = document.getElementById("colorInput");
+
+    colorInput.addEventListener("input", () => {
+        document.body.style.backgroundColor = colorInput.value;
+    });
 
 </script>
